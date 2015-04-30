@@ -241,7 +241,7 @@
 
 
 			<!-- Third Row Starts -->
-			<div class="row row-flex row-flex-wrap wow slideInRight" data-wow-duration="2s">
+			<div class="row wow slideInRight" data-wow-duration="2s">
 
 				<div class="col-sm-4 text-center">
 					<div class="panel panel-info flex-col">
@@ -251,7 +251,7 @@
 								<i class="fa fa-paint-brush"></i>
 							</div>
 					  </div>
-					  <div class="panel-body flex-grow">
+					  <div class="panel-body">
 					   Adjusting the layout and apply uniquie design concept to your project.
 					  </div>
 					</div>
@@ -341,7 +341,9 @@
 							<img src="{% static "images/youtube.jpg" %}">
 							<blockquote>
 								<p>"Python is fast enough for our site and allows us to produce maintainable features in record times, with a minimum of developers," said Cuong Do, Software Architect,</p>
-								<footer>YouTube.com</footer>
+								<br>
+                                <br>
+                                <footer>YouTube.com</footer>
 							</blockquote>
 						</div>
 						<div class="cbp-qtcontent">
@@ -352,7 +354,7 @@
 							</blockquote>
 						</div>
 						<div class="cbp-qtcontent">
-							<img src="{% static "images/django.png" %}">
+							<img src="{% static "images/django-150.png" %}">
 							<blockquote>
 								<p>"Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. "</p>
 								<footer>Djangoproject.com</footer>
@@ -377,18 +379,38 @@
 	<!-- Contact Starts -->
 	<section id="contact">
 		<div class="container">
-			<form action="" method="POST" role="form">
-				<legend>Contact for more information</legend>
 
-				<div class="form-group">
-					<label for="">label</label>
-					<input type="text" class="form-control" id="" placeholder="Input field">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+					<div class="pfblock-header wow fadeInUp" data-wow-duration="1s">
+								<h2 class="pfblock-title">Contact</h2>
+								<div class="pfblock-line"></div>
+								<div class="pfblock-subtitle">
+									Contact us for any question and more information.
+								</div>
+							</div>
 				</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <form action="" method="POST" role="form">
+                        {% csrf_token %}
+
+                        {{ form.non_field_errors }}
+                        {% for field in form %}
+                            <div class="form-group">
+
+                                {{ field }}
+                                {{ field.errors }}
+                            </div>
+                        {% endfor %}
 
 
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
 
-				<button type="submit" class="btn btn-primary">Submit</button>
-			</form>
 		</div>
 	</section>
 
