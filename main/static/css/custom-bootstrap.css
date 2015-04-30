@@ -8696,4 +8696,36 @@ blockquote footer {
 #skills-row p {
   font-size: 16px;
 }
+/* ---------------------------------------------- /*
+ * Contact
+/* ---------------------------------------------- */
+/* line 605, custom-other.less */
+#contact {
+  margin-bottom: 20px;
+}
+/* line 609, custom-other.less */
+#contactBtn {
+  background-color: #232323;
+  border-color: #6b6b6b;
+  width: 100%;
+}
+/* line 618, custom-other.less */
+.errorlist li {
+  padding-top: 10px;
+  color: red;
+  font-size: 12px;
+}
+/* ---------------------------------------------- /*
+ * Footer
+/* ---------------------------------------------- */
+/* line 629, custom-other.less */
+#footer {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background-color: #232323;
+}
+/* line 634, custom-other.less */
+#footer h2 {
+  color: #fff;
+}
 /*# sourceMappingURL=custom-bootstrap.css.map */
