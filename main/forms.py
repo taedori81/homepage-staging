@@ -1,8 +1,9 @@
 
 from django import forms
-from django.forms.extras.widgets import SelectDateWidget
+from parsley.decorators import parsleyfy
 
 
+@parsleyfy
 class ContactForm(forms.Form):
     name = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control',
                                                          'placeholder': 'Your Name'}), label='Name', max_length=100)

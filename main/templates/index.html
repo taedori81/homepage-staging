@@ -343,6 +343,8 @@
 								<p>"Python is fast enough for our site and allows us to produce maintainable features in record times, with a minimum of developers," said Cuong Do, Software Architect,</p>
 								<br>
                                 <br>
+                                <br>
+                                <br>
                                 <footer>YouTube.com</footer>
 							</blockquote>
 						</div>
@@ -394,20 +396,16 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3 wow fadeInUp">
-                    <form action="" method="POST" role="form">
+                    <form data-parsley-validate action="" method="POST" role="form">
                         {% csrf_token %}
 
                         {{ form.non_field_errors }}
                         {% for field in form %}
-                            <div class="form-group">
-
-                                {{ field }}
-                                {{ field.errors }}
-                            </div>
+                            {{ field }}
+                            {{ field.errors }}
                         {% endfor %}
 
-
-                        <button id="contactBtn" type="submit" class="btn btn-primary">Submit</button>
+                        <button id="contactBtn" type="submit" class="btn btn-primary">Send</button>
                     </form>
                 </div>
             </div>
@@ -446,7 +444,8 @@
 	</div>
 
 		<!-- jQuery -->
-		 <script src="{% static "js/jquery-1.11.2.js" %}"></script>
+		<script src="{% static "js/jquery.js" %}"></script>
+        <script src="{% static "js/parsley.min.js" %}"></script>
 		<!-- Bootstrap JavaScript -->
 		<script src="{% static "js/bootstrap.min.js" %}"></script>
 		<script src="{% static "js/jquery.parallax-1.1.3.js"%}"></script>
@@ -457,6 +456,8 @@
 		<script src="{% static "js/jquery.easypiechart.js" %}"></script>
 		<script src="{% static "js/noframework.waypoints.js" %}"></script>
 		<script src="{% static "js/jquery.cbpQTRotator.js" %}"></script>
+
+        <script src="{% static "js/django-angular.js" %}"></script>
 		<script src="{% static "js/custom.js" %}"></script>
 
 {% endblock %}
