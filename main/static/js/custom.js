@@ -99,6 +99,31 @@
 			});
 			wow.init();
 
+        /* ---------------------------------------------- /*
+			 * WOW Animation When You Scroll
+        /* ---------------------------------------------- */
+        $('#contact_form').parsley().subscribe('parsley:form:success', function (formInstance){
+            $('#contact_form').fadeOut(500);
+            $('#thankyou').fadeIn(500);
+        });
+
 	});
 
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

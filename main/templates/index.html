@@ -396,7 +396,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3 wow fadeInUp">
-                    <form data-parsley-validate action="" method="POST" role="form">
+                    <form id="contact_form" action="" method="POST" role="form">
                         {% csrf_token %}
 
                         {{ form.non_field_errors }}
@@ -407,6 +407,11 @@
 
                         <button id="contactBtn" type="submit" class="btn btn-primary">Send</button>
                     </form>
+                    <div id="thankyou" hidden="hidden" class="wow slideInRight">
+                        <div class="alert alert-success" role="alert">
+                            <p class="pfblock-subtitle">Thank You!  We will contact you as soon as possible</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -457,7 +462,6 @@
 		<script src="{% static "js/noframework.waypoints.js" %}"></script>
 		<script src="{% static "js/jquery.cbpQTRotator.js" %}"></script>
 
-        <script src="{% static "js/django-angular.js" %}"></script>
 		<script src="{% static "js/custom.js" %}"></script>
 
 {% endblock %}
